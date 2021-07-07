@@ -1,0 +1,74 @@
+{
+    "name": "osiset/laravel-shopify",
+    "description": "Shopify package for Laravel to aide in app development",
+    "keywords": [
+        "api",
+        "callback-url",
+        "driver",
+        "facade",
+        "laravel",
+        "laravel-package",
+        "laravel-shopify",
+        "scripttags",
+        "shopify",
+        "shopify-api",
+        "shopify-app",
+        "webhook"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tyler King",
+            "email": "tyler@osiset.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "ext-json": "*",
+        "funeralzone/valueobjects": "^0.5",
+        "jenssegers/agent": "^2.6",
+        "laravel/framework": "^7.0 || ^8.0",
+        "osiset/basic-shopify-api": "^9.0 || ^10.0"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.8",
+        "mockery/mockery": "^1.0",
+        "orchestra/database": "~3.8 || ~4.0 || ~5.0 || ~6.0",
+        "orchestra/testbench": "~3.8 || ~4.0 || ~5.0 || ~6.0",
+        "phpstan/phpstan": "^0.12",
+        "phpunit/phpunit": "~8.0 || ^9.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Osiset\\ShopifyApp\\ShopifyAppProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Osiset\\ShopifyApp\\": "src/ShopifyApp"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Osiset\\ShopifyApp\\Test\\": "tests"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-html-cov": "vendor/bin/phpunit --coverage-html ./build/html/",
+        "test-no-cov": "vendor/bin/phpunit --no-coverage"
+    },
+    "support": {
+        "issues": "https://github.com/osiset/laravel-shopify/issues",
+        "forum": "https://github.com/osiset/laravel-shopify/discussions",
+        "wiki": "https://github.com/osiset/laravel-shopify/wiki",
+        "source": "https://github.com/osiset/laravel-shopify"
+    }
+}
